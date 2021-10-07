@@ -1,0 +1,224 @@
+$widtContent: 450px;
+// Estilos comunes
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.btn {
+  display: block;
+  width: 150px;
+  padding: 10px 0;
+  border: none;
+  background-color: #0067b8;
+  color: #fff;
+  cursor: pointer;
+}
+input {
+  display: inline-block;
+  border: none;
+}
+input[type="text"],
+input[type="number"],
+select {
+  padding-bottom: 10px;
+  padding: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  background: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+label {
+  display: block;
+}
+img {
+  display: block;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+select {
+  border: none;
+  background: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+input[type="text"]:focus {
+  border-bottom: 1px solid #0067b8;
+}
+
+// -------------------------
+.container {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: #e2e2de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container-content {
+  width: $widtContent;
+  overflow: hidden;
+  position: relative;
+}
+.content-vistas {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(6, $widtContent);
+  align-items: center;
+  transition: all 0.3s;
+}
+.content {
+  width: $widtContent;
+}
+.register {
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 4px 1px rgba(0, 0, 0, 0.3);
+}
+.head {
+  display: flex;
+  justify-items: center;
+  &__title {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #737373;
+  }
+  &__icono {
+    display: grid;
+    grid-template-columns: repeat(2, 12px);
+    gap: 1px;
+    &__item {
+      &--red {
+        background-color: #f25022;
+      }
+      &--green {
+        background-color: #7fba00;
+      }
+      &--blue {
+        background-color: #00a4ef;
+      }
+      &--yellow {
+        background-color: #ffb900;
+      }
+    }
+  }
+}
+
+.main-content {
+  margin-bottom: 30px;
+  &__title {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+
+  &__datos {
+    &--flex {
+      display: flex;
+      input {
+        flex-grow: 1;
+        margin-right: 20px;
+      }
+    }
+    .input-100,
+    .select-100 {
+      width: 100%;
+    }
+
+    &__row {
+      margin-top: 15px;
+      &__item {
+        margin: 10px 0;
+
+        &--pais {
+          margin-bottom: 20px;
+          select {
+            margin-top: 15px;
+          }
+        }
+
+        &__nacimiento {
+          margin-top: 15px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          select,
+          input {
+            flex-grow: 1;
+            margin-right: 5px;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      &__item--flex {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        label {
+          flex-grow: 1;
+          margin-left: 10px;
+        }
+      }
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &__gallery {
+      display: grid;
+      width: 300px;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid rgb(0, 0, 0);
+    }
+  }
+  &__return {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    span {
+      display: inline-block;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+  &__paragraph {
+    line-height: 25px;
+    margin: 20px 0;
+  }
+}
+
+.link-footer {
+  &__item {
+    color: #0067b8;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  &__boton {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
