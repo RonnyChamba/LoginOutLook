@@ -37,8 +37,10 @@
                     type="text"
                     placeholder="Nuevo correo electrónico"
                     required
+                    class="input-mail"
+                    id="input-mail"
                   />
-                  <select name="tipe" id="">
+                  <select name="tipe" id="" class="tipo-mail">
                     <option value="@hotmail.com" selected>@hotmail.com</option>
                     <option value="@outlook.com">@outlook.com</option>
                     <option value="@outlook.es">@outlook.es</option>
@@ -77,10 +79,7 @@
               <div class="main-content">
                 <div class="main-content__return">
                   <span class="icon-arrow"></span>
-                  <p
-                    class="main-content__return__mail"
-                    id="main-content-mail"
-                  ></p>
+                  <p class="main-content__return__mail"></p>
                 </div>
                 <h2 class="title main-content__title">
                   Creaci&oacute;n de una contraseña
@@ -152,10 +151,7 @@
               <div class="main-content">
                 <div class="main-content__return">
                   <span class="icon-arrow"></span>
-                  <p
-                    class="main-content__return__mail"
-                    id="main-content-mail"
-                  ></p>
+                  <p class="main-content__return__mail"></p>
                 </div>
                 <h2 class="title main-content__title">
                   ¿Cu&aacute;l es su nombre?
@@ -203,10 +199,7 @@
               <div class="main-content">
                 <div class="main-content__return">
                   <span class="icon-arrow"></span>
-                  <p
-                    class="main-content__return__mail"
-                    id="main-content-mail"
-                  ></p>
+                  <p class="main-content__return__mail"></p>
                 </div>
                 <h2 class="title main-content__title">
                   ¿Cu&aacute;l es su fecha de nacimiento?
@@ -338,10 +331,7 @@
               <div class="main-content">
                 <div class="main-content__return">
                   <span class="icon-arrow"></span>
-                  <p
-                    class="main-content__return__mail"
-                    id="main-content-mail"
-                  ></p>
+                  <p class="main-content__return__mail"></p>
                 </div>
                 <h2 class="title main-content__title">Crear cuenta</h2>
                 <p class="paragraph main-content__paragraph">
@@ -383,10 +373,7 @@
               <div class="main-content">
                 <div class="main-content__return">
                   <span class="icon-arrow"></span>
-                  <p
-                    class="main-content__return__mail"
-                    id="main-content-mail"
-                  ></p>
+                  <p class="main-content__return__mail"></p>
                 </div>
                 <h2 class="title main-content__title">Crear cuenta</h2>
                 <p class="paragraph main-content__paragraph">
@@ -414,7 +401,7 @@
               <footer class="link-footer">
                 <div class="link-footer__boton">
                   <button type="button" class="btn link-footer__boton__btn">
-                    Siguiente
+                    Crear Cuenta
                   </button>
                 </div>
               </footer>
@@ -422,6 +409,27 @@
           </div>
         </div>
         <!-- Fin content-vistas -->
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__content">
+        <div class="head">
+          <div class="head__icono">
+            <div class="head__icono__item head__icono__item--red"></div>
+            <div class="head__icono__item head__icono__item--green"></div>
+            <div class="head__icono__item head__icono__item--blue"></div>
+            <div class="head__icono__item head__icono__item--yellow"></div>
+          </div>
+          <h2 class="head__title">CUENTA CREADA CON EXITO</h2>
+        </div>
+        <div class="main-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            labore perspiciatis porro sed obcaecati debitis? Sapiente fuga
+            voluptates eum consectetur dicta. Dolorum deleniti illo labore
+            cupiditate minus suscipit est! Necessitatibus.
+          </p>
+        </div>
       </div>
     </div>
     <script src="assets/js/script.js" type="module"></script>
