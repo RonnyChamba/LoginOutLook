@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Boton cerrar modal
+  document
+    .getElementById("btn-modal")
+    .addEventListener("click", () => resetComponents());
+
   const setMail = (card) => {
     let email = card.querySelector(".input-mail").value;
     let tipoEmail = card.querySelector(".tipo-mail");
@@ -26,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if ($contentCards.firstElementChild === card) setMail(card);
 
     if ($contentCards.lastElementChild === card) {
-      //  setMail(card);
+      showModal();
       return;
     }
     let anchoCard = getComputedStyle(card).getPropertyValue("width");
@@ -43,5 +48,21 @@ document.addEventListener("DOMContentLoaded", () => {
     let mLeft = getComputedStyle($contentCards).getPropertyValue("margin-left");
     anchoCard = "-" + Math.abs(parseInt(mLeft) + parseInt(anchoCard)) + "px";
     $contentCards.style.marginLeft = `${anchoCard}`;
+  };
+  const showModal = () => {
+    let modal = document.getElementById("modal");
+    modal.classList.toggle("modal--show");
+    let email = document.querySelector(
+      ".main-content__return__mail"
+    ).textContent;
+
+    modal.querySelector(
+      ".modal__content__text"
+    ).innerHTML = `El correo <span class ="modal__content__mail">${email}</span> fue creado correctamente. Inicia sesión para aprovechar las funciones de hotmail.`;
+  };
+  const resetComponents = (card) => {
+    document.getElementById("modal").classList.toggle("modal--show");
+    setTimeout(() => ($contentCards.style.marginLeft = "0"), 600);
+    document.querySelector(".input-mail").value = "";
   };
 });

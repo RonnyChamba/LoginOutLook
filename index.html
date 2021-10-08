@@ -18,7 +18,7 @@
         <div class="content-vistas" id="content-vistas">
           <!-- --------------------- Primer ---------------- -->
           <div class="content">
-            <article class="register" id="register">
+            <article class="register register-first" id="register">
               <header class="head">
                 <div class="head__icono">
                   <div class="head__icono__item head__icono__item--red"></div>
@@ -411,9 +411,9 @@
         <!-- Fin content-vistas -->
       </div>
     </div>
-    <div class="modal">
-      <div class="modal__content">
-        <div class="head">
+    <div class="modal" id="modal">
+      <section class="modal__content">
+        <header class="head">
           <div class="head__icono">
             <div class="head__icono__item head__icono__item--red"></div>
             <div class="head__icono__item head__icono__item--green"></div>
@@ -421,16 +421,25 @@
             <div class="head__icono__item head__icono__item--yellow"></div>
           </div>
           <h2 class="head__title">CUENTA CREADA CON EXITO</h2>
-        </div>
+        </header>
         <div class="main-content">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            labore perspiciatis porro sed obcaecati debitis? Sapiente fuga
-            voluptates eum consectetur dicta. Dolorum deleniti illo labore
-            cupiditate minus suscipit est! Necessitatibus.
-          </p>
+          <p
+            class="modal__content__text main-content__paragraph"
+            id="modal-text"
+          ></p>
         </div>
-      </div>
+        <footer class="link-footer">
+          <div class="link-footer__boton">
+            <button
+              type="button"
+              class="btn link-footer__boton__btn"
+              id="btn-modal"
+            >
+              Aceptar
+            </button>
+          </div>
+        </footer>
+      </section>
     </div>
     <script src="assets/js/script.js" type="module"></script>
   </body>
