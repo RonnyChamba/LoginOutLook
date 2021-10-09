@@ -16,6 +16,20 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("btn-modal")
     .addEventListener("click", () => resetComponents());
 
+  // Seleccionar el checked y asignarle un evento change, para que escuche cuando pulsas la casilla
+  document.getElementById("showpass").addEventListener("change", (e) => {
+    // seleccionar el input donde escribes la contraseña
+    const $pass = document.getElementById("password");
+
+    // validar si pulsaste en el checked
+    if (e.target.checked) {
+      // cambiar atributo type del input de password a text
+      $pass.setAttribute("type", "text");
+    } else {
+      // cambiar atributo type del input de text a password
+      $pass.setAttribute("type", "password");
+    }
+  });
   const setMail = (card) => {
     let email = card.querySelector(".input-mail").value;
     let tipoEmail = card.querySelector(".tipo-mail");
